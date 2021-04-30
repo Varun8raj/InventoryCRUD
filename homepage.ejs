@@ -1,0 +1,60 @@
+<html lang = "en" >
+    <head>
+        <title>FashionFeet REEBOK</title>
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href = "Styles.css" >
+    </head>
+    <body class = "c4">
+        <h1 class = "c1">REEBOK's Fashion Feet Inventory Management System</h1>
+        <h3 ><a href = "/create" class = "c2">Add New Product</a></h3>
+        <h3><a href = "/updatestock" class = "c2">Update-Stock</a></h3>
+        <h3><a href = "/deleteproduct" class = "c2">Delete-Product</a></h3>
+        <h2>Welcome</h2>
+        <p class = "c3" ><b>Reebok International Limited is an English-American footwear and clothing company that has been a subsidiary of German sporting goods giant Adidas since August 2005.
+Reebok produces and distributes fitness, running and CrossFit sportswear including clothing and footwear.
+It is the official footwear and apparel sponsor for CrossFit, and Spartan Race.
+        </p>
+        <p class = "c3">
+            Reebok designs, manufactures, distributes and sells fitness, running and CrossFit sportswear including clothing and footwear. The clothing line includes t-shirts, hoodies and pants among other items.
+The brand has also collaborated with other companies to produce fitness equipment and workouts.
+        </p>
+        <p class = "c3">
+            Reebok Future innovation house has developed a new technology they call Liquid Factory. A robot will extrude liquid polyurethane and "draw" shoe components without the use of traditional shoe molds.
+
+In 2017, the UFC announced the launch of a new collection under the name Fight Night Collection that includes an upgraded version of the Reebok-branded apparels.
+
+In 2018, Victoria Beckham being a long-term design partner with Reebok launched her first collection inspired by Shaquille O'Neal.
+        </p>
+
+        <center>
+            <table>
+                <tr>
+                    <th>Product Id</th>
+                    <th>Category</th>
+                    <th>Size</th>
+                    <th>Stock</th>
+                    <th>Price</th>
+                </tr>
+                <% for(var i=0;i<data.length;i++) {%>
+                    <tr>
+                        <td><%= data[i].pid %></td>
+                        <td><%= data[i].pname %></td>
+                        <td><%= data[i].psize %></td>
+                        <td><%= data[i].pstock %></td>
+			<td><%= data[i].sp %></td>
+                    
+                    </tr>
+                    
+               <% } %>
+
+
+            </table>
+        </center>
+
+        <footer>
+            <b>Reebok - Live With Fire</b>
+        </footer>
+
+    </body>
+</html>
